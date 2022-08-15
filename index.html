@@ -9,10 +9,25 @@
   </head>
   <body>
     <div id="app">
-      <p>{{number}}</p>
+      <p v-if="numberVisible">{{number}}</p>
+      <!-- Hides using display: none; instead of removing from the dom -->
+      <!-- <p v-show="numberVisible">{{number}}</p> -->
+      <button @click="toggleNumber">
+        <span v-if="numberVisible">Hide number</span>
+        <span v-else>Show number</span>
+      </button>
+
+      <br />
 
       <button v-on:click="number++">Increase</button>
       <button @click="number--">Decrease</button>
+      <button @click="updateNumber">Change to 5</button>
+
+      <br />
+
+      <ul>
+        <li v-for="number in numbers">{{number}}</li>
+      </ul>
     </div>
 
     <script src="app.js"></script>

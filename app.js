@@ -10,7 +10,17 @@ const app = Vue.createApp({
   data() {
     return {
       number: 0,
+      numbers: [0, 1, 2],
+      numberVisible: true,
     };
+  },
+  methods: {
+    updateNumber() {
+      this.number = 5;
+    },
+    toggleNumber() {
+      this.numberVisible = !this.numberVisible;
+    },
   },
 });
 
