@@ -30,7 +30,9 @@
       <br />
 
       <ul>
-        <li v-for="number in numbers">{{number}}</li>
+        <li v-for="number in numbers" :class="{even: number % 2 !== 0}">
+          {{number}}
+        </li>
       </ul>
     </div>
 
