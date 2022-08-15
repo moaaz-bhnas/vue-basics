@@ -9,6 +9,7 @@
 const app = Vue.createApp({
   data() {
     return {
+      url: "https://www.linkedin.com/in/moaaz-bhnas/",
       number: 0,
       numbers: [0, 1, 2],
       numberVisible: true,
