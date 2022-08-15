@@ -23,6 +23,11 @@ const app = Vue.createApp({
       this.numberVisible = !this.numberVisible;
     },
   },
+  computed: {
+    numbersIncreased() {
+      return this.numbers.map((number) => number + 1);
+    },
+  },
 });
 
 app.mount("#app");
